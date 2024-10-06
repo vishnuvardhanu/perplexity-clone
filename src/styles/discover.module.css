@@ -1,0 +1,130 @@
+.pg{
+    height: 100%;
+    background-color: #191b1a;
+    color: white;
+    border-radius: 8px;
+    border: #222627 1px solid;
+    margin: auto auto;
+}
+
+.hdbox{
+    height: 70px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    border-bottom: #222627 1px solid;
+}
+.hd{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 33px;
+    width: 100%;
+    margin: auto;
+    padding: 10px 30px;
+    gap: 10px;
+}
+
+.content{
+    margin: auto;
+    padding: 10px 30px;
+    box-sizing: border-box;
+    width: fit-content;
+}
+
+.stickybar {
+    height: 65px;
+    width: 100%;
+    background-color: #191b1a;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+@media all and (max-width:910px) {
+    .stickybar{
+        width: 100%;
+    }
+}
+@media all and (max-width:850px) {
+    .stickybar{
+        width: 86%;
+    }
+}
+.list {
+    display: flex;
+    padding: 8px 0;
+    overflow: hidden;
+    overflow-x: hidden;
+    flex-wrap: nowrap;
+    width: 600px;
+    height: fit-content;
+}
+@media all and (max-width:950px) {
+    .list{
+        width: 550px;
+    }
+}
+@media all and (max-width:900px) {
+    .list{
+        width: 500px;
+    }
+}
+
+.listitem {
+    display: flex;
+    white-space: nowrap;
+    gap: 5px;
+    padding: 12px;
+    background-color: #191b1a;
+    color: white;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    transition: 0.3s;
+    flex: 0 0 auto; 
+}
+.listitem:hover {
+    opacity: 60%;
+}
+.selectedlistitem {
+    background-color: #172a2f;
+    color: #20b8cd;
+}
+.catglist {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    border-radius: 30px;
+    background-color: #2c2f30;
+    border: 0;
+    color: white;
+}
+.catglist:hover {
+    opacity: 70%;
+}
+
+@media (max-width: 768px) {
+    .stickybar {
+        height: auto; 
+        padding: 10px 0;
+    }
+
+    .list {
+        padding: 5px 0; 
+    }
+
+    .listitem {
+        padding: 10px; 
+        font-size: 14px; 
+    }
+
+    .catglist {
+        padding: 6px; 
+    }
+}

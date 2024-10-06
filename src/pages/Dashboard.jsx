@@ -9,7 +9,10 @@ function Dashboard() {
   return (
     <div className={DashboardModule.pg}>
         <Sidebar/>
-        <Outlet/>
+        <div className={DashboardModule.os}>
+          <Outlet/>
+        </div>
+        
     </div>
   )
 }

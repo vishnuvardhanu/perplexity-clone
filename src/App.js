@@ -13,7 +13,6 @@ function App() {
       children:[
         {
           index:true,
-          path:"/discover",
           element:<Discover/>
         },
         {

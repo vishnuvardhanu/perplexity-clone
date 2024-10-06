@@ -27,7 +27,7 @@ function NavbarNavigation() {
         },
         {
           name: "Discover",
-          path: "/discover",
+          path: "/",
           logo: (
             <svg
               aria-hidden="true"
@@ -94,7 +94,7 @@ function NavbarNavigation() {
     <div className={sbstyl.menulist}>
           {navmenu.map((nav, index) => (
             <div className={sbstyl.navitem} key={index}>
-              {nav.path == "/discover" && (
+              {nav.path == "/" && (
                 <span>
                   <NavLink to={nav.path} className={sbstyl.mnlink}>
                     {nav.logo}
@@ -102,7 +102,7 @@ function NavbarNavigation() {
                   </NavLink>
                 </span>
               )}
-              {nav.path != "/discover" && (
+              {nav.path != "/" && (
                 <span>
                   {nav.logo}
                   <p>{nav.name}</p>

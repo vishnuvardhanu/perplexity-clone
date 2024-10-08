@@ -1,15 +1,9 @@
-import React, { useContext, useState } from "react";
+import React,{useContext, useState} from "react";
 import ds from "../styles/discover.module.css";
-import CatgListPopUp from "../components/CatgListPopUp";
 import { AppContext } from "../context/ContextProvider";
-import StickyBar from "../components/StickyBar";
-import Header from "../components/Header";
-import Articles from "../components/Articles";
 
-function Discover() {
-
-  const { isCatgList, setIsCatgList, currentArticle, setCurrentArticle } = useContext(AppContext);
-  const [selectedCategory, setSelectedCategory] = useState("Top");
+function StickyBar({selectedCategory,setSelectedCategory}) {
+  const { isCatgList, setIsCatgList} = useContext(AppContext);
 
   const listitems = [
     {
@@ -140,20 +134,107 @@ function Discover() {
     },
   ];
 
+  const handleClick = (e, catg) => {
+    e.preventDefault();
+    setSelectedCategory(catg);
+  };
+
+  const handleCatgButton = () => {
+    setIsCatgList(!isCatgList);
+    console.log(isCatgList);
+  };
   return (
-    <div className={ds.pg}>
-      <Header/>
-      <div className={ds.pgcontent}>
-        <div className={ds.content}>
-          <StickyBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
-          <Articles selectedCategory={selectedCategory}/>
-        </div>
+    <div className={ds.stickybar}>
+      <button
+        className={ds.scrollbutton}
+        onClick={() => {
+          const scrollContainer = document.querySelector(`.${ds.list}`);
+          scrollContainer.scrollBy({ left: -150, behavior: "smooth" });
+        }}
+      >
+        <svg
+          aria-hidden="true"
+          height={14}
+          focusable="false"
+          data-prefix="far"
+          data-icon="arrow-left"
+          class="svg-inline--fa fa-arrow-left fa-fw fa-1x "
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M7.4 273.4C2.7 268.8 0 262.6 0 256s2.7-12.8 7.4-17.4l176-168c9.6-9.2 24.8-8.8 33.9 .8s8.8 24.8-.8 33.9L83.9 232 424 232c13.3 0 24 10.7 24 24s-10.7 24-24 24L83.9 280 216.6 406.6c9.6 9.2 9.9 24.3 .8 33.9s-24.3 9.9-33.9 .8l-176-168z"
+          ></path>
+        </svg>
+      </button>
+
+      <div className={ds.list}>
+        {listitems.map((item, index) => (
+          <button
+            key={index}
+            className={`${ds.listitem} ${
+              selectedCategory == item.name ? ds.selectedlistitem : ""
+            } `}
+            onClick={(e) => handleClick(e, item.name)}
+          >
+            {item.img}
+            <p>{item.name}</p>
+          </button>
+        ))}
       </div>
-      {isCatgList && (
-        <CatgListPopUp isCatgList={isCatgList} setIsCatgList={setIsCatgList} />
-      )}
+
+      <button
+        className={ds.scrollbutton}
+        onClick={() => {
+          const scrollContainer = document.querySelector(`.${ds.list}`);
+          scrollContainer.scrollBy({ left: 150, behavior: "smooth" });
+        }}
+      >
+        <svg
+          aria-hidden="true"
+          height={14}
+          focusable="false"
+          data-prefix="far"
+          data-icon="arrow-right"
+          class="svg-inline--fa fa-arrow-right fa-fw fa-1x "
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 448 512"
+        >
+          <path
+            fill="currentColor"
+            d="M440.6 273.4c4.7-4.5 7.4-10.8 7.4-17.4s-2.7-12.8-7.4-17.4l-176-168c-9.6-9.2-24.8-8.8-33.9 .8s-8.8 24.8 .8 33.9L364.1 232 24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l340.1 0L231.4 406.6c-9.6 9.2-9.9 24.3-.8 33.9s24.3 9.9 33.9 .8l176-168z"
+          ></path>
+        </svg>
+      </button>
+
+      <button
+        className={ds.catglist}
+        title="Personalize Discover"
+        onClick={handleCatgButton}
+      >
+        <svg
+          aria-hidden="true"
+          height={14}
+          focusable="false"
+          data-prefix="far"
+          data-icon="sliders"
+          class="svg-inline--fa fa-sliders fa-fw fa-1x "
+          role="img"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 512 512"
+        >
+          <path
+            fill="currentColor"
+            d="M0 416c0 13.3 10.7 24 24 24l59.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 440c13.3 0 24-10.7 24-24s-10.7-24-24-24l-251.7 0c-10.2-32.5-40.5-56-76.3-56s-66.1 23.5-76.3 56L24 392c-13.3 0-24 10.7-24 24zm128 0a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zM320 256a32 32 0 1 1 64 0 32 32 0 1 1 -64 0zm32-80c-35.8 0-66.1 23.5-76.3 56L24 232c-13.3 0-24 10.7-24 24s10.7 24 24 24l251.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56l59.7 0c13.3 0 24-10.7 24-24s-10.7-24-24-24l-59.7 0c-10.2-32.5-40.5-56-76.3-56zM192 128a32 32 0 1 1 0-64 32 32 0 1 1 0 64zm76.3-56C258.1 39.5 227.8 16 192 16s-66.1 23.5-76.3 56L24 72C10.7 72 0 82.7 0 96s10.7 24 24 24l91.7 0c10.2 32.5 40.5 56 76.3 56s66.1-23.5 76.3-56L488 120c13.3 0 24-10.7 24-24s-10.7-24-24-24L268.3 72z"
+          ></path>
+        </svg>
+      </button>
+
     </div>
   );
 }
 
-export default Discover;
+export default StickyBar;

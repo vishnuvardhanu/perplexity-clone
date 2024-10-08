@@ -3,6 +3,7 @@ import Dashboard from './pages/Dashboard';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Discover from './pages/Discover';
 import Article from './pages/Article'
+import { ContextProvider } from './context/ContextProvider';
 
 
 function App() {
@@ -24,7 +25,10 @@ function App() {
   ])
   return (
     <div className="App">
-      <RouterProvider router={router}/>
+      <ContextProvider>
+        <RouterProvider router={router}/>
+      </ContextProvider>
+
     </div>
   );
 }

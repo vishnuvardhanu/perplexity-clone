@@ -23,6 +23,7 @@
   padding: 2px 8px;
   position: sticky;
   top: 0;
+  z-index: 1000;
 }
 .hd {
   width: 80%;
@@ -95,11 +96,7 @@
   max-width: 674px;
   padding: 10px;
 }
-.scrollbox {
-  width: 100%;
-  max-width: 297px;
-  background-color: red;
-}
+
 .title {
   font-size: 48px;
   font-weight: lighter;
@@ -175,6 +172,7 @@
 }
 .dthd{
     font-size: 30px;
+    margin-bottom: 15px;
 }
 .hdimg{
     max-height: 314px;

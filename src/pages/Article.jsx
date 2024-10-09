@@ -1,16 +1,18 @@
-import React, { useContext } from "react";
+import React, { useContext, useRef } from "react";
 import { AppContext } from "../context/ContextProvider";
 import art from "../styles/article.module.css";
 import ArticleHeader from "../components/ArticleHeader";
 import Sources from "../components/Sources";
 import ExtraSources from "../components/ExtraSources";
+import ScrollSpy from "../components/ScrollSpy";
 
 function Article() {
   const { currentArticle, setCurrentArticle } = useContext(AppContext);
   const content = currentArticle.content;
+  const scrollContainerRef = useRef(null);
 
   return (
-    <div className={art.pg}>
+    <div className={art.pg} ref={scrollContainerRef}>
       <ArticleHeader heading={currentArticle.title.text} />
       <div className={art.contentbox}>
         <div className={art.introimg}>
@@ -97,10 +99,12 @@ function Article() {
               extra={currentArticle.sourcesextra}
             />
 
-            <div className={art.articlecontent}>
+            <div className={art.articlecontent} ref={scrollContainerRef}>
               {content.map((c, index) => (
                 <div key={index} className={art.data}>
-                  <span className={art.dthd}>{c.heading}</span>
+                  <span className={art.dthd} id={`heading${index + 1}`}>
+                    {c.heading}
+                  </span>
                   {c.img && (
                     <img src={c.img} className={art.hdimg} alt={c.heading} />
                   )}
@@ -114,12 +118,15 @@ function Article() {
                       ))}
                     </ul>
                   )}
-                  <ExtraSources sources={currentArticle.sources}/>
+                  <ExtraSources sources={currentArticle.sources} />
                 </div>
               ))}
             </div>
           </div>
-          <div className={art.scrollbox}>H</div>
+          <ScrollSpy
+            content={content}
+            scrollContainerRef={scrollContainerRef}
+          />
         </div>
       </div>
     </div>

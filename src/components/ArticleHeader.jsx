@@ -3,7 +3,7 @@ import art from "../styles/article.module.css";
 
 function ArticleHeader({ heading }) {
   return (
-    <div className={art.hdbox}>
+    <div className={art.hdbox} id="heading0">
       <div className={art.hd}>{heading}</div>
       <div className={art.links}>
         <span className={art.save}>

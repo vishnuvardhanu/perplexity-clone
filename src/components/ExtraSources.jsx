@@ -10,7 +10,7 @@ function ExtraSources({ sources }) {
             <img src={sources[0].img} className={art.img1} alt="" />
           </div>
           <div key={2}>
-            <img src={sources[1].img} className={art.img2} alt="" />
+            <img src={sources[2].img} className={art.img2} alt="" />
           </div>
         </span>
         <p>2 Sources</p>

@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import art from "../styles/bigcard.module.css";
+import { useNavigate } from "react-router-dom";
+import { AppContext } from "../context/ContextProvider";
 
 function BigCard({ article }) {
+  const navigate = useNavigate();
+  const {currentArticle, setCurrentArticle} = useContext(AppContext);
   const handleClick = () => {
-    console.log(article)
+    setCurrentArticle(article);
+    navigate('/article');
   };
   return (
     <div

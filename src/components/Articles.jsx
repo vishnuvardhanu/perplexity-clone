@@ -6,12 +6,16 @@ import BigCard from "./BigCard";
 import SmallCard from "./SmallCard";
 
 function Articles({ selectedCategory }) {
-    
+  
   return (
     <div className={art.content}>
       {
         Top.map((article) =>
-        article.id === 1 || article.id % 4 === 0 ? <BigCard article={article}/> : <SmallCard article={article}/>
+        article.id % 4 === 0 ? (
+          <BigCard article={article} />
+        ) : (
+          <SmallCard article={article} />
+        )
       )}
     </div>
   );

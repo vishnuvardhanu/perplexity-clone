@@ -1,0 +1,269 @@
+.pg {
+  height: 100%;
+  width: 100%;
+  background-color: #191b1a;
+  color: white;
+  border-radius: 8px;
+  border: #222627 1px solid;
+  margin: auto;
+  overflow: hidden;
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+}
+.pg::-webkit-scrollbar{
+    width: 0;
+}
+.hdbox {
+  height: 49px;
+  display: flex;
+  align-items: center;
+  background-color: #191b1a;
+  border-bottom: #222627 1px solid;
+  justify-content: space-between;
+  padding: 2px 8px;
+  position: sticky;
+  top: 0;
+}
+.hd {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.links {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  height: 100%;
+}
+.links span {
+  height: 30px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 3px;
+  border-radius: 5px;
+}
+.save {
+  background-color: #181a19;
+  color: #777a79;
+  border: #4f5150 1px solid;
+  height: 100%;
+  width: 30px;
+}
+.copy {
+  width: 30px;
+  color: #121b15;
+  background-color: #1dbbc7;
+}
+.share {
+  color: #121b15;
+  background-color: #1dbbc7;
+  width: fit-content;
+  padding: 0 8px;
+}
+.contentbox {
+  max-width: 1040px;
+  margin: auto;
+  padding-bottom: 50px;
+  padding-top: 40px;
+  height: 97vh;
+  
+}
+
+.introimg {
+  height: 350px;
+  display: flex;
+}
+.introimg img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  overflow: hidden;
+  border-radius: 7px;
+}
+.ctntbox {
+  width: 100%;
+  height: fit-content;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  font-family: sans-serif;
+}
+.content {
+  width: 100%;
+  max-width: 674px;
+  padding: 10px;
+}
+.scrollbox {
+  width: 100%;
+  max-width: 297px;
+  background-color: red;
+}
+.title {
+  font-size: 48px;
+  font-weight: lighter;
+}
+
+@media all and (max-width: 770px) {
+  .content {
+    width: 100%;
+    max-width: 100%;
+  }
+  .scrollbox {
+    display: none;
+  }
+  .title {
+    font-size: 30px;
+  }
+}
+
+.athrinfo {
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+.athr {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.athrinfo img {
+  height: 32px;
+  width: 32px;
+  border-radius: 20px;
+}
+.athr span {
+  opacity: 60%;
+  font-weight: lighter;
+}
+.mtdt {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.mtdt span {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  opacity: 70%;
+  gap: 5px;
+}
+.introduction {
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 20px 0;
+}
+
+.introduction span {
+  font-size: 48px; 
+  font-weight: bold; 
+  float: left; 
+  line-height: 1;
+  margin-right: 8px;
+}
+.data{
+    width: 100%;
+    margin-top: 38px;
+    display: flex;
+    flex-direction: column;
+    color: #dcdbdb;
+}
+.dthd{
+    font-size: 30px;
+}
+.hdimg{
+    max-height: 314px;
+    width: 100%;
+    height: 100%;  
+    border-radius: 5px;
+    object-fit: cover;
+    margin-bottom: 30px;
+    margin-top: 15px;
+}
+.hdimg:hover{
+    scale: 1.06;
+    transition: 0.2s;
+}
+.dtdesc{
+    width: 100%;
+    line-height: 1.4;
+    margin-bottom: 15px;
+    font-size: 17px;
+}
+.list{
+    list-style-type: disc;
+    list-style-position: inside;
+    font-size: 16px;
+}
+.pt{
+    margin: 13px 0;
+    height: fit-content;
+}
+.pt span{
+    width: 100%;
+    padding-left: 6px;
+}
+
+.espg{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.esbox{
+    width: 100%;
+    height: 32px;
+    width: 120px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    gap: 10px;
+    justify-content: space-between;
+    transition: 0.3s;
+    border: #4f5150 1px solid;
+    padding: 4px;
+    border-radius: 15px;
+}
+.esbox span{
+    display: flex;
+    height: 100%;   
+    padding: 10px 0;
+    position: relative;
+    align-items: center;
+}
+.esbox span img{
+    width: 20px;
+    height: 20px;
+    border: #4f5150 1px solid;
+    border-radius: 15px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    top: 1px;
+}
+.img2{
+    left:11px;
+}
+.esbox:hover .img2{
+    left: 21px;
+}
+.esbox p{
+    font-size: 14px;
+    opacity: 70%;
+    margin-right: 5px;
+}
+.eslink{
+    height: 32px;
+    width: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15px;
+}
+.eslink:hover{
+    background-color: #3c3e3d;
+}

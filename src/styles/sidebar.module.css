@@ -6,6 +6,11 @@
   flex-direction: column;
   justify-content: space-between;
 }
+@media all and (max-width:770px) {
+  .bar{
+    display: none;
+  }
+}
 .top {
   padding: 10px;
   display: flex;

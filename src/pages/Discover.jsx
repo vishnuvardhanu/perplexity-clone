@@ -1,15 +1,48 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import ds from "../styles/discover.module.css";
 import CatgListPopUp from "../components/CatgListPopUp";
 import { AppContext } from "../context/ContextProvider";
 import StickyBar from "../components/StickyBar";
 import Header from "../components/Header";
 import Articles from "../components/Articles";
+import top from '../assets/data/top.json'
+import tech from '../assets/data/tech.json'
+import finance from '../assets/data/finance.json'
+import arts from '../assets/data/arts.json'
+import sprots from '../assets/data/sports.json'
+import entertainment from '../assets/data/entertainment.json'
 
 function Discover() {
 
   const { isCatgList, setIsCatgList, currentArticle, setCurrentArticle } = useContext(AppContext);
   const [selectedCategory, setSelectedCategory] = useState("Top");
+  useEffect(() => {
+    switch (selectedCategory) {
+      case "Top":
+        setCurrentArticle(top);
+        break;
+      case "Tech & Science":
+        setCurrentArticle(tech)
+        break;
+      case "Finance":
+        setCurrentArticle(finance);
+        break;
+        case "Arts & Culture":
+          setCurrentArticle(arts);
+          break;
+        case "Sports":
+          setCurrentArticle(sprots);
+          break;
+        case "Entertainment":
+          setCurrentArticle(entertainment);
+          break;
+        default:
+          setCurrentArticle(top);
+          break;
+    }
+    console.log(selectedCategory);
+  }, [selectedCategory])
+  
 
   const listitems = [
     {
@@ -146,7 +179,7 @@ function Discover() {
       <div className={ds.pgcontent}>
         <div className={ds.content}>
           <StickyBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory}/>
-          <Articles selectedCategory={selectedCategory}/>
+          <Articles currentArticle={currentArticle}/>
         </div>
       </div>
       {isCatgList && (

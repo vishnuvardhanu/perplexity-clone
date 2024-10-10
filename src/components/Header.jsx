@@ -1,7 +1,9 @@
 import React from "react";
 import ds from "../styles/discover.module.css";
+import { useNavigate } from "react-router-dom";
 
 function Header() {
+  
   return (
     <div className={ds.hdbox}>
       <div className={ds.hd}>

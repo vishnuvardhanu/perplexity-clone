@@ -1,0 +1,85 @@
+.box{
+    position: fixed;
+    bottom: 75px;
+    max-width: 674px;
+    width: 100%;
+    height: 73px;
+    background-color: #202221;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius:45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+    padding: 8px; 
+}
+@media all and (max-width:770px) {
+    .box{
+        width: 97%;
+    }
+}
+@media all and (min-width:770px) {
+    .box{
+        bottom: 20px;
+    }
+}
+.inp{
+    width: 100%;
+    height: 100%;
+    border: #535453 1px solid;
+    border-radius: 45px;
+    display: flex;
+    padding: 8px;
+    align-items: center;
+}
+.inp input{
+    width: 100%;
+    max-width: 530px;
+    border-radius: 45px;
+    border: none;
+    padding: 8px;
+    outline: none;
+    background-color: #202221;
+    font-size: 17px;
+    color: white;
+}
+.things{
+    display: flex;
+    height: 32px;
+    max-width: 110px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    color: #535453;
+}
+.swtch{
+    height: 25px;
+    width: 38px;
+    border: #535453 1px solid;
+    border-radius: 15px;
+    padding: 4px;
+}
+.ball{
+    width: 50%;
+    height: 100%;
+    background-color: #535453;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #535453;
+    border-radius: 10px;
+}
+.icon{
+    height: 32px;
+    width: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #353635;
+    border-radius: 15px;
+}
+.active{
+    background-color:#20b8cd;
+    color: #222322;
+}

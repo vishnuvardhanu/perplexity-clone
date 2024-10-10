@@ -25,7 +25,7 @@ function SmallCard({ article }) {
       <div className={sc.ft}>
         <span>
           <img
-            src="https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/831bd9b7-78f7-4d06-7380-44809b816500/thumbnail"
+            src={article.profile}
             alt="p"
             height={20}
           />

@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import art from "../styles/scrollspy.module.css";
 
-function ScrollSpy({ content, scrollContainerRef }) {
+function ScrollSpy({ content, scrollContainerRef, heading, setHeading }) {
   const [activeSection, setActiveSection] = useState("");
 
   useEffect(() => {
@@ -15,15 +15,16 @@ function ScrollSpy({ content, scrollContainerRef }) {
         document.querySelector("#heading4"),
       ];
 
-      let currentSection = "";
+      let currentSection = "heading0";
 
-      headings.forEach((section) => {
+      headings.forEach((section, index) => {
         if (section) {
           const sectionTop = section.offsetTop;
-          const sectionHeight = section.clientHeight;
-          const scrollTop = scrollContainer.scrollTop; 
-          if (scrollTop >= sectionTop - sectionHeight / 3) {
-            currentSection = section.getAttribute("id");
+          const sectionBottom = sectionTop + section.clientHeight;
+          const scrollTop = scrollContainer.scrollTop;
+
+          if (scrollTop >= sectionBottom - 1) {
+            currentSection = `heading${index + 1}`;
           }
         }
       });
@@ -41,24 +42,54 @@ function ScrollSpy({ content, scrollContainerRef }) {
         scrollContainer.removeEventListener("scroll", handleScroll); // Cleanup
       }
     };
-  }, [scrollContainerRef]); 
+  }, [scrollContainerRef]);
   return (
     <div className={art.sb}>
       <ul className={art.sbul}>
-        <li className={`${activeSection === "heading0" ? art.active : ""} ${art.sbli}`}>
-          <a href="#heading0"  className={art.sba}>Introduction</a>
+        <li
+          className={`${activeSection === "heading0" ? art.active : ""} ${
+            art.sbli
+          }`}
+        >
+          <a href="#heading0" className={art.sba}>
+            Introduction
+          </a>
         </li>
-        <li className={`${activeSection === "heading1" ? art.active : ""} ${art.sbli}`}>
-          <a href="#heading1" className={art.sba}>{content[0].heading}</a>
+        <li
+          className={`${activeSection === "heading1" ? art.active : ""} ${
+            art.sbli
+          }`}
+        >
+          <a href="#heading1" className={art.sba}>
+            {content[0].heading}
+          </a>
         </li>
-        <li className={`${activeSection === "heading2" ? art.active : ""} ${art.sbli}`}>
-          <a href="#heading2" className={art.sba}>{content[1].heading}</a>
+        <li
+          className={`${activeSection === "heading2" ? art.active : ""} ${
+            art.sbli
+          }`}
+        >
+          <a href="#heading2" className={art.sba}>
+            {content[1].heading}
+          </a>
         </li>
-        <li className={`${activeSection === "heading3" ? art.active : ""} ${art.sbli}`}>
-          <a href="#heading3" className={art.sba}>{content[2].heading}</a>
+        <li
+          className={`${activeSection === "heading3" ? art.active : ""} ${
+            art.sbli
+          }`}
+        >
+          <a href="#heading3" className={art.sba}>
+            {content[2].heading}
+          </a>
         </li>
-        <li className={`${activeSection === "heading4" ? art.active : ""} ${art.sbli}`}>
-          <a href="#heading4" className={art.sba}>{content[3].heading}</a>
+        <li
+          className={`${activeSection === "heading4" ? art.active : ""} ${
+            art.sbli
+          }`}
+        >
+          <a href="#heading4" className={art.sba}>
+            {content[3].heading}
+          </a>
         </li>
       </ul>
     </div>

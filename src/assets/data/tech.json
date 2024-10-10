@@ -1,0 +1,79 @@
+[
+  {
+    "id": 0,
+    "title": {
+      "text": "Internet Archive Data Breach",
+      "img": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjAwMDV8MHwxfHNlYXJjaHwyfHxJbnRlcm5ldCUyMEFyY2hpdmUlMjBEYXRhJTIwQnJlYWNofGVufDF8fHx8MTcyODUxODQzNHww&ixlib=rb-4.0.3&q=80&w=1080"
+    },
+    "author": "katemccarthy",
+    "profile": "https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w1MjAwMDV8MHwxfHNlYXJjaHwyfHxJbnRlcm5ldCUyMEFyY2hpdmUlMjBEYXRhJTIwQnJlYWNofGVufDF8fHx8MTcyODUxODQzNHww&ixlib=rb-4.0.3&q=80&w=1080",
+    "md": {
+      "time": "9 hrs",
+      "views": "2,981",
+      "followups": "159"
+    },
+    "introduction": "According to reports from BleepingComputer, the Internet Archive's 'Wayback Machine' has suffered a significant data breach, with hackers compromising the website and stealing a user authentication database containing 31 million unique records.",
+    "introimg": "",
+    "content": [
+      {
+        "heading": "Impact of DDoS Attacks",
+        "description": "The Internet Archive has been facing sustained distributed denial-of-service (DDoS) attacks since May 26, 2024, causing intermittent service disruptions and impacting access to its preserved web pages and historical archives. These attacks have involved tens of thousands of fake information requests per second, taking the service offline periodically over several days. While the Internet Archive has assured that all collections remain safe, the attacks have significantly affected user access to critical resources like the Wayback Machine, which preserves over 866 billion web pages",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "Security Vulnerabilities in Archive.org",
+        "description": "The Internet Archive's recent data breach highlights ongoing security vulnerabilities in the platform. The compromised database contained sensitive user information, including email addresses, screen names, and Bcrypt-hashed passwords. This incident follows a series of DDoS attacks on the Archive earlier in 2024, which disrupted access to its services for several days. The breach underscores the need for enhanced security measures, particularly for large-scale digital libraries that store vast amounts of historical and cultural data. Users are advised to change their passwords and remain vigilant for potential phishing attempts using the leaked information.",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "Role of Have I Been Pwned",
+        "description": "Have I Been Pwned (HIBP) plays a crucial role in the aftermath of data breaches by allowing users to check if their personal information has been compromised. Created by security expert Troy Hunt in 2013, HIBP aggregates data from hundreds of breaches and provides a free service for individuals to search for their email addresses or phone numbers in its database. Key features include:",
+        "points": [
+          "Breach notification: Users can sign up for alerts if their email appears in future data breaches",
+          "Password checking: The site allows users to verify if their passwords have been exposed in previous breaches",
+          "Integration with password managers: Services like 1Password incorporate HIBP data to warn users about compromised passwords",
+          "Sensitive breach handling: HIBP treats certain breaches, like the Ashley Madison leak, with extra privacy measures"
+        ],
+        "img": ""
+      },
+      {
+        "heading": "Inconvenience of DDoS",
+        "description": "The impact of these DDoS attacks extends beyond mere inconvenience, potentially threatening the accessibility of vast amounts of digital cultural heritage and historical information. This incident highlights the vulnerability of important non-profit digital libraries to cyber threats and underscores the need for robust cybersecurity measures to protect these valuable online resources",
+        "points": [],
+        "img": ""
+      }
+    ],
+    "related": [
+      "How often does Have I Been Pwned update its database",
+      "Can I use Have I Been Pwned to check for phone number breaches",
+      "What are the benefits of using a password manager like 1Password with Have I Been Pwned",
+      "How does Have I Been Pwned handle sensitive information",
+      "What other features does Have I Been Pwned offer besides breach checks"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "author": "bleepingcomputer",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=bleepingcomputer.com",
+        "heading": "Internet Archive hacked, data breach impacts 31 million users",
+        "description": "October 9, 2024 06:22 PM 0 Internet Archive's 'The Wayback Machine' has suffered a data breach after a threat actor compromised the website and stole a user"
+      },
+      {
+        "id": 2,
+        "author": "blog.archive",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=blog.archive.org",
+        "heading": "Internet Archive and the Wayback Machine under DDoS cyber-attack",
+        "description": "The Internet Archive, the nonprofit research library that’s home to millions of historical documents, preserved websites, and media content, is currently in its third day of"
+      },
+      {
+        "id": 3,
+        "author": "infosecurity-magazine",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=infosecurity-magazine.com",
+        "heading": "Internet Archive Disrupted by Sustained and “Mean” DDoS Attack",
+        "description": "The Internet Archive is experiencing sustained distributed denial-of-service (DDoS) attacks, leading to service disruptions. The non-profit research library,"
+      }
+    ]
+  }
+]

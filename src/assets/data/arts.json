@@ -1,0 +1,80 @@
+[
+  {
+    "id": 0,
+    "title": {
+      "text": "London Frieze Week",
+      "img": "https://pplx-res.cloudinary.com/image/upload/v1728493627/getty_uploads/1709831072.jpg"
+    },
+    "author": "stephenhoban",
+    "profile": "https://imagedelivery.net/MPdwyYSWT8IY7lxgN3x3Uw/6e59b304-1220-44e5-d6e3-ea17b0c8aa00/thumbnail",
+    "md": {
+      "time": "17 hrs",
+      "views": "1,543",
+      "followups": "11"
+    },
+    "introduction": "Frieze London 2024, taking place from October 9-13 in Regent's Park, promises to be a highlight of the global contemporary art calendar. As reported by Frieze, this year's fair features a reimagined layout and a renewed focus on emerging talents and artistic practices. With over 160 galleries from 43 countries participating, visitors can expect a diverse array of must-see exhibits, from Benedikte Bjerre's whimsical penguin balloons to Tracey Emin's poignant reflections on mortality at White Cube.",
+    "introimg": "",
+    "content": [
+      {
+        "heading": "Frieze London Highlights",
+        "description": "This year's fair introduces a complete redesign of both Frieze London and Frieze Masters, featuring new layouts and curated zones that aim to return to Frieze's original values1. The Focus section, showcasing emerging galleries, has been moved to the entrance, highlighting works by artists like Dean Sameshima and Charlotte Edey2. A new tent flanked by windows will bring natural light and views of Regent's Park into the exhibition space2. The Artist to Artist programme returns, with established artists like Hurvin Anderson and Rashid Johnson nominating lesser-known counterparts to exhibit2. These changes reflect Frieze London's commitment to providing an inspiring context for visitors to experience contemporary art from around the world",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "Must-See Exhibits 2024",
+        "description": "Visitors to Frieze London 2024 can explore a diverse range of captivating exhibits. Highlights include:",
+        "points": [
+          "Benedikte Bjerre's installation of 125 walking penguin balloons in the Frieze Focus section",
+          "Tania Ximena's freestanding sculptural paintings combining volcanology and spiritual introspection",
+          "The Smoke section curated by Pablo José Ramírez, featuring ceramic works exploring diasporic and indigenous histories",
+          "Tracey Emin's emotionally charged paintings, sculptures, and video work at White Cube",
+          "Anna Weyant's surreal, psychological studies at Gagosian"
+        ],
+        "img": ""
+      },
+      {
+        "heading": "Cultural Impact of Frieze",
+        "description": "Frieze Week has solidified London's position as a global art destination, attracting international collectors, curators, and critics. The event's influence extends beyond the fair itself, with galleries and museums across the city staging exhibitions to coincide with the influx of art enthusiasts1. This cultural phenomenon has made mid-October the busiest time in London's art calendar, transforming the city into a vibrant hub of contemporary art1. The fair's impact is evident in its ability to shape trends, launch careers, and facilitate significant art transactions, with past editions seeing attendance numbers soar to over 60,000 visitors2. Frieze's expansion to include editions in New York, Los Angeles, and Seoul further underscores its global significance in the contemporary art world2",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "Additional Art Activities",
+        "description": "Beyond the main fair, Frieze Week offers a plethora of art experiences across London. The East End Day and West End Night events invite visitors to explore galleries and non-profits throughout the city, with special openings on October 6 and 10 respectively1. Art enthusiasts can also enjoy curator-led tours of Frieze Sculpture Park, featuring works by artists like Zanele Muholi and Libby Heaney2. Major institutions join the festivities with notable exhibitions, including Vincent van Gogh at The National Gallery, Francis Bacon at the National Portrait Gallery, and Mire Lee's installation in the Tate Modern's Turbine Hall34. These diverse offerings ensure that Frieze Week extends far beyond Regent's Park, transforming London into a citywide celebration of contemporary art.",
+        "points": [],
+        "img": ""
+      }
+    ],
+    "related": [
+      "What unique art activities are available during Frieze Week",
+      "Are there any interactive art installations at Frieze London",
+      "How can I participate in artist talks during Frieze Week",
+      "What are the best spots for people-watching at Frieze London",
+      "Are there any family-friendly art activities at Frieze Sculpture"
+    ],
+    "sources": [
+      {
+        "id": 1,
+        "author": "wallpaper",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=wallpaper.com",
+        "heading": "Frieze London 2024: everything to see and do - Wallpaper Magazine",
+        "description": "The fair programme was announced this year with news of a complete redesign of both Frieze London and its sister fair Frieze Masters. New layouts and curated zones"
+      },
+      {
+        "id": 2,
+        "author": "10magazine",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=10magazine.com",
+        "heading": "10 Things To See At This Year's Frieze London - 10 Magazine",
+        "description": "Running from October 9 to 13, Frieze London is bringing together artists from 160 galleries and 43 different countries. It's certain to be a good'un, and a big'un"
+      },
+      {
+        "id": 3,
+        "author": "10magazine",
+        "img": "https://www.google.com/s2/favicons?sz=128&domain=10magazine.com",
+        "heading": "7 Not-To-Be-Missed Exhibitions During Frieze London - Galerie",
+        "description": "With Frieze London and Frieze Masters opening this week, London’s lively art scene is bubbling over with exciting exhibitions of contemporary and modern art. From Trace"
+      }
+    ]
+  }
+]

@@ -1,13 +1,18 @@
-import React, { useContext, useRef } from "react";
+import React, { useContext, useRef, useState } from "react";
 import { AppContext } from "../context/ContextProvider";
 import art from "../styles/article.module.css";
 import ArticleHeader from "../components/ArticleHeader";
 import Sources from "../components/Sources";
 import ExtraSources from "../components/ExtraSources";
 import ScrollSpy from "../components/ScrollSpy";
+import RelatedArticles from "../components/RelatedArticles";
+import SuggestedArticles from "../components/SuggestedArticles";
+import Search from "../components/Search";
 
 function Article() {
   const { currentArticle, setCurrentArticle } = useContext(AppContext);
+  const [heading, setHeading] = useState("");
+  const related = currentArticle.related;
   const content = currentArticle.content;
   const scrollContainerRef = useRef(null);
 
@@ -122,13 +127,18 @@ function Article() {
                 </div>
               ))}
             </div>
+            <RelatedArticles related={related} />
+            <SuggestedArticles currentid={currentArticle.id} title={currentArticle.title.text} />
           </div>
           <ScrollSpy
             content={content}
             scrollContainerRef={scrollContainerRef}
+            setHeading={setHeading}
+            heading={heading}
           />
         </div>
       </div>
+      <Search />
     </div>
   );
 }

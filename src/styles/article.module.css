@@ -9,6 +9,7 @@
   overflow: hidden;
   overflow-y: scroll;
   scroll-behavior: smooth;
+  position: relative;
 }
 .pg::-webkit-scrollbar{
     width: 0;
@@ -30,6 +31,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 18px;
 }
 .links {
   display: flex;
@@ -82,6 +84,9 @@
   object-fit: cover;
   overflow: hidden;
   border-radius: 7px;
+}
+.introimg img:hover{
+  scale: 1.03;
 }
 .ctntbox {
   width: 100%;
@@ -190,6 +195,7 @@
 .dtdesc{
     width: 100%;
     line-height: 1.4;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
     margin-bottom: 15px;
     font-size: 17px;
 }
@@ -204,7 +210,7 @@
 }
 .pt span{
     width: 100%;
-    padding-left: 6px;
+    
 }
 
 .espg{

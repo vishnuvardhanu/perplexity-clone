@@ -1,0 +1,68 @@
+[
+  {
+    "id": 0,
+    "title": {
+      "text": "",
+      "img": ""
+    },
+    "author": "",
+    "profile": "",
+    "md": {
+      "time": "",
+      "views": "",
+      "followups": ""
+    },
+    "introduction": "",
+    "introimg": "",
+    "content": [
+      {
+        "heading": "",
+        "description": "",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "",
+        "description": "",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "",
+        "description": "",
+        "points": [],
+        "img": ""
+      },
+      {
+        "heading": "",
+        "description": "",
+        "points": [],
+        "img": ""
+      }
+    ],
+    "related": ["", "", "", "", ""],
+    "sources": [
+      {
+        "id": 1,
+        "author": "",
+        "img": "",
+        "heading": "",
+        "description": ""
+      },
+      {
+        "id": 2,
+        "author": "",
+        "img": "",
+        "heading": "",
+        "description": ""
+      },
+      {
+        "id": 3,
+        "author": "",
+        "img": "",
+        "heading": "",
+        "description": ""
+      }
+    ]
+  }
+]

@@ -143,6 +143,7 @@ function StickyBar({selectedCategory,setSelectedCategory}) {
     setIsCatgList(!isCatgList);
     console.log(isCatgList);
   };
+  
   return (
     <div className={ds.stickybar}>
       <button
